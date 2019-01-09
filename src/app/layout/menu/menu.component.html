@@ -1,0 +1,28 @@
+<GridLayout class="navBottom" height="70" width="100%" rows="auto" columns="auto,auto,auto,auto,auto">
+
+    <GridLayout class="nav" rows="*,auto" cols="auto" col="0" row="0" width="20%" (tap)="tapMenu(5)">
+        <Image [class]="selectedTab==5?'navIcon active':'navIcon'" row="0" [src]="selectedTab==5?'~/assets/images/calendar_active.png':'~/assets/images/calendar.png'"></Image>
+        <Label row="1" text="日历" class="navText"></Label>
+    </GridLayout>
+
+    <GridLayout class="nav" rows="*,auto" cols="auto" col="1" row="0" width="20%" (tap)="tapMenu(0)">
+        <Image [class]="selectedTab==0?'navIcon active':'navIcon'" row="0" [src]="selectedTab==0?'~/assets/images/reading_active.png':'~/assets/images/reading.png'"></Image>
+        <Label row="1" text="读书单" class="navText"></Label>
+    </GridLayout>
+
+    <GridLayout class="nav" rows="*,auto" cols="auto" col="2" row="0" width="20%" (tap)="tapMenu(1)">
+        <Image [class]="selectedTab==1?'navIcon active':'navIcon'" row="0" [src]="selectedTab==1?'~/assets/images/favorite_active.png':'~/assets/images/favorite.png'"></Image>
+        <Label row="1" text="愿望书单" class="navText"></Label>
+    </GridLayout>
+
+    <GridLayout class="nav" rows="*,auto" cols="auto" col="3" row="0" width="20%" (tap)="tapMenu(2)">
+        <Image [class]="selectedTab==2?'navIcon active':'navIcon'" row="0" [src]="selectedTab==2?'~/assets/images/suggestion_active.png':'~/assets/images/suggestion.png'"></Image>
+        <Label row="1" text="建议书单" class="navText"></Label>
+    </GridLayout>
+
+    <GridLayout class="nav" rows="*,auto" cols="auto" col="4" row="0" width="20%" (tap)="tapMenu(3)">
+        <Image [class]="selectedTab==3?'navIcon active':'navIcon'" row="0" [src]="selectedTab==3?'~/assets/images/me_active.png':'~/assets/images/me.png'"></Image>
+        <Label row="1" text="我" class="navText"></Label>
+    </GridLayout>
+
+</GridLayout>

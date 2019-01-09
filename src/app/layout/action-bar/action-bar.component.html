@@ -1,0 +1,15 @@
+<GridLayout *ngIf="actionBarModel" class="navTop" height="50" width="100%" rows="auto" columns="auto,auto,auto">
+
+    <GridLayout rows="*" cols="auto" col="0" row="0" width="20%" height="100%" verticalAlignment="center">
+        <Label *ngIf="actionBarModel.showLeftButton" class="navigator-button" text="{{leftButtonContent}}" horizontalAlignment="left" marginLeft="5" (tap)="tapLeftButton()"></Label>
+    </GridLayout>
+
+    <GridLayout rows="*" cols="auto" col="1" row="0" width="60%" height="100%" horizontalAlignment="center">
+        <Label class="title" text="{{actionBarModel.title}}" horizontalAlignment="center"></Label>
+    </GridLayout>
+
+    <GridLayout rows="*" cols="auto" col="2" row="0" width="20%" height="100%" verticalAlignment="center">
+        <Label *ngIf="actionBarModel.showRightButton" class="navigator-button" text="{{rightButtonContent}}" horizontalAlignment="right" marginRight="5" (tap)="tapRightButton()"></Label>
+    </GridLayout>
+
+</GridLayout>

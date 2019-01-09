@@ -1,0 +1,15 @@
+.navTop {
+    background-color: #634EDA;
+    vertical-align: top;
+}
+
+.title{
+    font-size: 30;
+    color: white;
+    font-weight: bold;
+}
+
+.navigator-button {
+    font-size: 13;
+    color: white;
+}

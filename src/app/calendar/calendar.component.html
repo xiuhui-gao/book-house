@@ -1,0 +1,47 @@
+<GridLayout rows="30, 50, *" width="100%" height="100%">
+    <GridLayout row="0" width="100%" columns="auto, auto, auto">
+        <Image col="0" width="10%" src="~/assets/images/left_arrow.png" (tap)="minusCalendarMonth()"></Image>
+        <Label col="1" width="80%" class="year-month-label" text="{{ currentYear + '年' +  (currentMonth+1) + '月' }}"></Label>
+        <Image col="2" width="10%" src="~/assets/images/right_arrow.png" (tap)="addCalendarMonth()"></Image>
+    </GridLayout>
+    <GridLayout row="1" columns="auto, auto, auto, auto, auto, auto, auto" width="100%">
+        <GridLayout class="title-bar" rows="*,auto" cols="auto" col="0" row="0" width="14%">
+            <Label class="calendar-title" text="日"></Label>
+        </GridLayout>
+
+        <GridLayout rows="*,auto" cols="auto" col="1" row="0" width="14%">
+            <Label class="calendar-title" text="一"></Label>
+        </GridLayout>
+
+        <GridLayout rows="*,auto" cols="auto" col="2" row="0" width="14%">
+            <Label class="calendar-title" text="二"></Label>
+        </GridLayout>
+
+        <GridLayout rows="*,auto" cols="auto" col="3" row="0" width="14%">
+            <Label class="calendar-title" text="三"></Label>
+        </GridLayout>
+
+        <GridLayout rows="*,auto" cols="auto" col="4" row="0" width="14%">
+            <Label class="calendar-title" text="四"></Label>
+        </GridLayout>
+
+        <GridLayout rows="*,auto" cols="auto" col="5" row="0" width="14%">
+            <Label class="calendar-title" text="五"></Label>
+        </GridLayout>
+
+        <GridLayout rows="*,auto" cols="auto" col="6" row="0" width="14%">
+            <Label class="calendar-title" text="六"></Label>
+        </GridLayout>
+    </GridLayout>
+    <GridLayout row="2" columns="auto,*" width="100%">
+        <WrapLayout class="title-bar" orientation="horizontal" width="100%">
+            <GridLayout *ngFor="let day of daysForShow" class="{{ selectedDate.toDateString() == day.wrappedDate?.toDateString() ? 'calendar-item-highlight calendar-item' : 'calendar-item' }}"
+                width="14%" rows="20, auto" (tap)="selectCalendarDay(day)">
+                <GridLayout rows="20%, 80%">
+                    <Label row="0" class="day-text" text="{{ day.type == -1 ? '' : (isToday(day.wrappedDate) ? '今天' : day.label )}}"></Label>
+                    <Label row="1" class="event-text" text="" height="40" verticalAlignment="top" textWrap="true"></Label>
+                </GridLayout>
+            </GridLayout>
+        </WrapLayout>
+    </GridLayout>
+</GridLayout>

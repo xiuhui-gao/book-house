@@ -1,0 +1,37 @@
+.navBottom {
+    background-color: #f4f4f4;
+    border-color: red;
+    vertical-align: bottom;
+}
+    
+.nav {
+    height: 100%;
+    width: 100%;
+    vertical-align: center;
+    padding-bottom: 5;
+}
+
+.nav.active {
+    background-color: #0Dc43776;
+}
+
+.navIcon {
+    horizontal-align: center;
+    vertical-align: center;
+    height: 30;
+    margin-top: 20px;
+}
+
+.navIcon.active {
+    vertical-align: center;
+}
+
+.navText {
+    margin-bottom: 2;
+    margin-top: 5px;
+    font-size: 12;
+    /* color: #c43776; */
+    color: #d62526;
+    horizontal-align: center;
+    vertical-align: center;
+}

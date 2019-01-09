@@ -1,0 +1,31 @@
+.add-btn {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    vertical-align: bottom;
+    margin-bottom: 150px;
+}
+
+@keyframes move-left {
+    from { transform: translate(0, 0) }
+    to { transform: translate(-1000, 0) }
+}
+
+/* .item {
+    animation-name: move-left;
+    animation-duration: 2;
+} */
+
+.deleteField {
+    background-color: #C73420;
+    display: none;
+}
+
+.deleteButton {
+    color: white;
+}
+
+.item {
+    /* transition: all 2s ease-in;
+    transform: translateX(-100) */
+}

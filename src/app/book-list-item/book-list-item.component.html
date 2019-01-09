@@ -1,0 +1,11 @@
+<GridLayout rows="auto, *" columns="auto,auto,auto" width="100%" height="100" (swipe)="onSwipe($event)">
+    <GridLayout class="book-list-item" col="0" [width]="imageFieldWidth" verticalAlignment="center" (tap)="tapBook(book.isbn)">
+        <Image class="cover-image" src="{{book.image}}"></Image>
+    </GridLayout>
+    <GridLayout class="book-list-item" col="1" [width]="titleFieldWidth" verticalAlignment="center" (tap)="tapBook(book.isbn)">
+        <Label text="{{book.title}}"></Label>
+    </GridLayout>
+    <GridLayout class="deleteField" col="2" [width]="deleteFieldWidth" height="100" (tap)="deleteBook(book.isbn)">
+        <Button class="deleteButton" text="删除" horizontalAlignment="center" verticalAlignment="center"></Button>
+    </GridLayout>
+</GridLayout>

@@ -1,0 +1,6 @@
+<ScrollView orientation="vertical" (swipe)="onSwipe($event)">
+    <GridLayout *ngIf="book" rows="auto,*">
+        <Image row="0" src={{book.image}} width="75%" marginTop="30"></Image>
+        <Label row="1" text="{{book.summary}}" textWrap="true" marginTop="30" marginLeft="5" marginRight="5"></Label>
+    </GridLayout>
+</ScrollView>

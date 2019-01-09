@@ -1,0 +1,22 @@
+<GridLayout *ngIf="books" rows="auto, *" columns="auto, auto" width="100%" height="100%">
+    <ListView *ngIf="books" [items]="books" width="100%" height="{{books.length>5? '100%' : books.length*100}}">
+        <ng-template let-book="item">
+            <StackLayout orientation="vertical" height="100" class="item">
+                <bh-book-list-item [book]="book" (deleteEvent)="loadBooks()"></bh-book-list-item>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>
+
+<Image class='add-btn' src="~/assets/images/add.png" (tap)="showAddOptionDialog()"></Image>
+
+<GridLayout rows="auto auto" columns="*" visibility="{{ showSearchBar ? 'visible' : 'collapsed'}}">
+    <SearchBar row="0" hint="书名" color="black" textFieldBackgroundColor="white" textFieldHintColor="gray" (textChange)="seachTextChange($event)"></SearchBar>
+    <ListView row="1" [items]="myItems" class="list-group">
+        <ng-template let-item="item">
+            <GridLayout class="item list-group-item" (tap)="navigateToDetail(item.isbn)">
+                <Label [text]="item.title" class="list-group-item-heading"></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>
